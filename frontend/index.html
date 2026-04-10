@@ -45,12 +45,12 @@
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Option 1: Audio Upload</h3>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Option 1: Video/Audio Upload</h3>
                     <div class="border-2 border-dashed border-slate-300 rounded-xl p-6 text-center hover:bg-slate-50 transition cursor-pointer" id="dropzone" onclick="document.getElementById('audioFile').click()">
-                        <input type="file" id="audioFile" accept="audio/*" class="hidden">
-                        <svg class="mx-auto h-10 w-10 text-slate-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                        <p class="text-sm text-slate-600"><span class="font-medium text-indigo-600">Click to upload</span> or drag and drop</p>
-                        <p class="text-xs text-slate-500 mt-1" id="fileNameDisplay">MP3, WAV, M4A up to 10MB</p>
+                        <input type="file" id="audioFile" accept="video/mp4,video/x-m4v,video/*,audio/*" class="hidden">
+                        <svg class="mx-auto h-10 w-10 text-slate-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        <p class="text-sm text-slate-600"><span class="font-medium text-indigo-600">Click to upload video</span> or drag and drop</p>
+                        <p class="text-xs text-slate-500 mt-1" id="fileNameDisplay">MP4, MOV, Audio up to 10GB</p>
                     </div>
                 </div>
 
@@ -115,6 +115,21 @@
                         <div class="flex items-end justify-between">
                             <span id="contentScoreText" class="text-2xl font-bold text-slate-800">--</span>
                         </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-purple-50 p-3 rounded-xl border border-purple-100 text-center">
+                        <p class="text-[10px] text-purple-600 font-semibold mb-1 uppercase tracking-wider">Body Language</p>
+                        <span id="physicalScoreText" class="text-xl font-bold text-slate-800">--</span>
+                    </div>
+                    <div class="bg-pink-50 p-3 rounded-xl border border-pink-100 text-center">
+                        <p class="text-[10px] text-pink-600 font-semibold mb-1 uppercase tracking-wider">Expression</p>
+                        <span id="expressionScoreText" class="text-xl font-bold text-slate-800">--</span>
+                    </div>
+                    <div class="bg-teal-50 p-3 rounded-xl border border-teal-100 text-center">
+                        <p class="text-[10px] text-teal-600 font-semibold mb-1 uppercase tracking-wider">Prop Usage</p>
+                        <span id="blackboardScoreText" class="text-xl font-bold text-slate-800">--</span>
                     </div>
                 </div>
 

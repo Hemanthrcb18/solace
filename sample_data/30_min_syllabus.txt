@@ -1,0 +1,8 @@
+Machine Learning Basics
+Supervised Learning vs Unsupervised Learning
+Linear Regression and Gradient Descent
+Classification problems and Logistic Regression
+Decision Trees and Random Forests
+Neural Networks and Deep Learning basics
+Model Evaluation, Accuracy, Precision, Recall
+Overfitting, Underfitting, and Regularization

@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const formData = new FormData();
                 formData.append('file', audioFileInput.files[0]);
                 formData.append('syllabus', syllabusText);
-                response = await fetch(`${API_BASE_URL}/analyze/audio`, {
+                response = await fetch(`${API_BASE_URL}/analyze/video`, {
                     method: 'POST',
                     body: formData
                 });
@@ -99,6 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('contentScoreText').textContent = data.scores.content_score;
         document.getElementById('wpmText').textContent = `${data.scores.wpm} wpm`;
         document.getElementById('feedbackText').textContent = `"${data.feedback}"`;
+        
+        // New Vision Metrics
+        document.getElementById('physicalScoreText').textContent = data.scores.physical_score || "--";
+        document.getElementById('expressionScoreText').textContent = data.scores.expression_score || "--";
+        document.getElementById('blackboardScoreText').textContent = data.scores.blackboard_score || "--";
 
         // Update radial progress bar
         const finalScore = data.scores.final_score;
